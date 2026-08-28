@@ -1,4 +1,12 @@
 const progress=document.querySelector('.progress');
+const tributeMusic=document.getElementById('tributeMusic');
+
+function startMusic(){
+  tributeMusic.play().catch(()=>{});
+}
+
+startMusic();
+document.addEventListener('pointerdown',startMusic,{once:true});
 
 window.addEventListener('scroll',()=>{
   const doc=document.documentElement;
